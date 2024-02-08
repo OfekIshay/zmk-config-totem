@@ -20,13 +20,6 @@
 #define TVP1 4
 #define TVP2 5
 
-&mt {
-    quick-tap-ms = <100>;
-    global-quick-tap;
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -114,7 +107,7 @@
             >;
         };
 
-        layer_3 {
+        Mouse {
             bindings = <
        &none     &none     &none      &none      &none    &none  &none  &none  &none  &none
        &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &none  &none  &none  &none  &none
@@ -123,30 +116,30 @@
             >;
         };
 
-        layer_4 {
+        Sym {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+       &kp LS(LBRC)   &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RBRC)     &none  &none      &none      &none     &none
+       &kp LS(COLON)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(PLUS)     &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&none  &kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)     &kp LS(POUND)  &kp LS(PIPE)     &none  &none      &none      &none     &none     &none
+                                    &kp LS(LPAR)   &kp LS(RPAR)   &kp LS(UNDER)    &none  &none      &none
             >;
         };
 
-        layer_5 {
+        Num {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+       &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &none      &none      &none     &none
+       &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&none  &kp GRAVE  &kp N1  &kp N2   &kp N3  &kp BSLH     &none  &none      &none      &none     &none     &none
+                          &kp DOT  &kp N0  &kp MINUS    &none  &none      &none
             >;
         };
 
-        layer_6 {
+        Fun {
             bindings = <
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+       &kp F12  &kp F7  &kp F8     &kp F9     &kp PRINTSCREEN    &none  &none      &none      &none     &none
+       &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
+&none  &kp F10  &kp F1  &kp F2     &kp F3     &kp PAUSE_BREAK    &none  &none      &none      &none     &none     &none
+                        &kp K_APP  &kp SPACE  &kp TAB            &none  &none      &none
             >;
         };
     };
