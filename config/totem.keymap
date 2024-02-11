@@ -23,6 +23,8 @@
     delay-ms = <0>;                   // 0
 };
 
+&mt { flavor = "balanced"; };
+
 &msc {
     acceleration-exponent = <1>;      // 0
     time-to-max-speed-ms = <5000>;      // 300
