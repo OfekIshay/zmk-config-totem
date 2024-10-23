@@ -8,7 +8,7 @@ manifest:
       url-base: https://github.com/OfekIshay
   projects:
     - name: zmk
-      remote: mine
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
   self:
