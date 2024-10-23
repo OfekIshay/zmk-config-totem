@@ -8,8 +8,8 @@ manifest:
       url-base: https://github.com/OfekIshay
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: main
+      remote: mine
+      revision: feat/mouse-keys-3.2
       import: app/west.yml
   self:
     path: config
