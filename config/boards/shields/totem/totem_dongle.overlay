@@ -8,15 +8,19 @@
 
 &xiao_i2c {
     status = "okay";
-    ssd1306@3c {
-        compatible = "ssd1306";
-        reg = <0x3C>;  // I2C address of the display, commonly 0x3C or 0x3D
-        label = "SSD1306";
+    oled: ssd1306@3c {
+        compatible = "solomon,ssd1306fb-i2c";
+        reg = <0x3C>;  // I2C address of the OLED
         width = <128>;
         height = <64>;
-        segment-offset = <0>; // Adjust if necessary for your display
-        page-offset = <0>;    // Adjust if necessary for your display
-        reset-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;  // Example GPIO; change based on your wiring
-        i2c-bus = <&xiao_i2c>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <63>;
+        segment-remap;
+        com-invdir;
+        inversion-on;
+        prechargep = <0x22>;
+        reset-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>; // Change based on your wiring
     };
 };
