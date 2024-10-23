@@ -6,12 +6,17 @@
 
  #include "totem.dtsi"
 
- &kscan0 {
-     col-gpios
-         = <&xiao_d 8 GPIO_ACTIVE_HIGH>
-         , <&xiao_d 9 GPIO_ACTIVE_HIGH>
-         , <&xiao_d 10 GPIO_ACTIVE_HIGH>
-         , <&xiao_d 5 GPIO_ACTIVE_HIGH>
-         , <&xiao_d 4 GPIO_ACTIVE_HIGH>
-         ;
- };
+&xiao_i2c {
+    status = "okay";
+    ssd1306@3c {
+        compatible = "ssd1306";
+        reg = <0x3C>;  // I2C address of the display, commonly 0x3C or 0x3D
+        label = "SSD1306";
+        width = <128>;
+        height = <64>;
+        segment-offset = <0>; // Adjust if necessary for your display
+        page-offset = <0>;    // Adjust if necessary for your display
+        reset-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>;  // Example GPIO; change based on your wiring
+        i2c-bus = <&xiao_i2c>;
+    };
+};
