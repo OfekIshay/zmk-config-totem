@@ -5,6 +5,10 @@
  */
 
  #include "totem.dtsi"
+  / {
+        chosen {
+          zephyr,display = &oled;
+        };
  &kscan0 {
      col-gpios
          = <&xiao_d 8 GPIO_ACTIVE_HIGH>
@@ -12,9 +16,7 @@
          , <&xiao_d 10 GPIO_ACTIVE_HIGH>
          ;
  };
-chosen {
-    zephyr,display = &oled;
-};
+
 &xiao_i2c {
     status = "okay";
     oled: ssd1306@3c {
@@ -32,4 +34,5 @@ chosen {
         prechargep = <0x22>;
         reset-gpios = <&gpio0 6 GPIO_ACTIVE_LOW>; // Change based on your wiring
     };
+};
 };
