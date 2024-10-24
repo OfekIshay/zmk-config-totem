@@ -4,10 +4,12 @@
  * SPDX-License-Identifier: MIT
  */
 
+ #include "totem.dtsi"
   / {
         chosen {
           zephyr,display = &oled;
         };
+
  xiao_i2c {
     status = "okay";
     #address-cells = <1>;
