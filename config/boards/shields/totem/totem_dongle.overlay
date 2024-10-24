@@ -29,12 +29,10 @@
 
  &xiao_i2c {
     status = "okay";
-    #address-cells = <1>;
-    #size-cells = <0>;
     oled: ssd1306@3c {
         compatible = "solomon,ssd1306fb-i2c";
         reg = <0x3C>;  // I2C address of the OLED
-        width = <128>;
+        width = <129>;
         height = <64>;
         segment-offset = <1>;
         page-offset = <0>;
