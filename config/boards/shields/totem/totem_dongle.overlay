@@ -1,7 +1,11 @@
  #include "totem.dtsi"
- &chosen {
-        zmk,display = &oled;
- };
+ / {
+     chosen {
+         zmk,kscan = &kscan0;
+         zmk,matrix_transform = &default_transform;
+         zmk,display = &oled;
+     };
+    };
  &kscan0 {
      col-gpios
          = <&xiao_d 4 GPIO_ACTIVE_HIGH>
