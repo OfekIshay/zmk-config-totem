@@ -16,6 +16,10 @@
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1250  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 100    // 10
+#define BASE 0
+#define NAV  1
+#define SYM  2
+#define ADJ  3
 
 &mmv {
     acceleration-exponent = <1>;      // 1
