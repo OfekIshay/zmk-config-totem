@@ -16,10 +16,7 @@
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1250  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 100    // 10
-#define BASE 0
-#define NAV  1
-#define SYM  2
-#define ADJ  3
+
 
 &mmv {
     acceleration-exponent = <1>;      // 1
@@ -105,6 +102,7 @@
         // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         Media {
+            label = "MEDIA";
             bindings = <
        &none         &none         &none      &none           &none    &none       &none             &none         &none         &none
        &kp LEFT_GUI  &kp LEFT_ALT  &kp LCTRL  &kp LEFT_SHIFT  &none    &none       &kp C_PREV        &kp C_VOL_DN  &kp C_VOL_UP  &kp C_NEXT
@@ -114,6 +112,7 @@
         };
 
         Nav {
+            label = "NAV";
             bindings = <
        &none     &none     &none      &none      &none    &kp K_AGAIN   &kp K_PASTE  &kp K_COPY  &kp K_CUT  &kp K_UNDO
        &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &kp CAPSLOCK  &kp LEFT     &kp DOWN    &kp UP     &kp RIGHT
@@ -123,6 +122,8 @@
         };
 
         Mouse {
+
+            label = "MOUSE";
             bindings = <
        &none     &none     &none      &none      &none    &kp K_AGAIN  &kp K_PASTE     &kp K_COPY      &kp K_CUT     &kp K_UNDO
        &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &none    &none        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
@@ -132,6 +133,7 @@
         };
 
         Sym {
+            label = "SYM";
             bindings = <
        &kp LS(LBRC)   &kp LS(AMPS)  &kp LS(STAR)   &kp LS(LPAR)   &kp LS(RBRC)     &none  &none      &none      &none     &none
        &kp LS(COLON)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(PLUS)     &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
@@ -141,6 +143,7 @@
         };
 
         Num {
+            label = "NUM";
             bindings = <
        &kp LBKT   &kp N7  &kp N8   &kp N9  &kp RBKT     &none  &none      &none      &none     &none
        &kp SEMI   &kp N4  &kp N5   &kp N6  &kp EQUAL    &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
@@ -150,6 +153,7 @@
         };
 
         Fun {
+            label = "FUNC";
             bindings = <
        &kp F12  &kp F7  &kp F8     &kp F9     &kp PRINTSCREEN    &none  &none      &none      &none     &none
        &kp F11  &kp F4  &kp F5     &kp F6     &kp SCROLLLOCK     &none  &kp LSHFT  &kp LCTRL  &kp LALT  &kp LGUI
